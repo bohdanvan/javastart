@@ -1,6 +1,8 @@
 package com.bvan.javastart.array;
 
 /**
+ * Линейный поиск четных элементов массива.
+ *
  * @author bvanchuhov
  */
 public class EvenElemFinder {
@@ -14,6 +16,13 @@ public class EvenElemFinder {
         System.out.println("Last even elem index: " + findLastEvenIndex(array));
     }
 
+    /**
+     * Находит первый четный элемент массива.
+     *
+     * @param array исходный массив.
+     * @return первый четный элемент массива или {@code Integer.MIN_VALUE}, если такого элемнта нет.
+     * @throws IllegalArgumentException если массив {@code null}.
+     */
     public static int findFirstEvenElem(int[] array) {
         checkNotNull(array);
 
@@ -26,6 +35,13 @@ public class EvenElemFinder {
         return Integer.MIN_VALUE;
     }
 
+    /**
+     * Находит последний четный элемент массива.
+     *
+     * @param array исходный массив.
+     * @return последний четный элемент массива или {@code Integer.MIN_VALUE}, если такого элемнта нет.
+     * @throws IllegalArgumentException если массив {@code null}.
+     */
     public static int findLastEvenElem(int[] array) {
         checkNotNull(array);
 
@@ -39,6 +55,13 @@ public class EvenElemFinder {
         return Integer.MIN_VALUE;
     }
 
+    /**
+     * Находит индекс первого четного элемента массива.
+     *
+     * @param array исходный массив.
+     * @return индекс первого четного элемента массива или -1, если такого элемнта нет.
+     * @throws IllegalArgumentException если массив {@code null}.
+     */
     public static int findFirstEvenIndex(int[] array) {
         checkNotNull(array);
 
@@ -52,6 +75,13 @@ public class EvenElemFinder {
         return -1;
     }
 
+    /**
+     * Находит индекс последнего четного элемента массива.
+     *
+     * @param array исходный массив.
+     * @return индекс последнего четного элемента массива или -1, если такого элемнта нет.
+     * @throws IllegalArgumentException если массив {@code null}.
+     */
     public static int findLastEvenIndex(int[] array) {
         checkNotNull(array);
 
@@ -65,8 +95,14 @@ public class EvenElemFinder {
         return -1;
     }
 
-    private static boolean isEven(int elem) {
-        return elem % 2 == 0;
+    /**
+     * Проверяет, четное ли число.
+     *
+     * @param n исходное число.
+     * @return {@code true}, если число четное.
+     */
+    private static boolean isEven(int n) {
+        return n % 2 == 0;
     }
 
     private static void checkNotNull(int[] array) {

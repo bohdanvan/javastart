@@ -18,8 +18,11 @@ public class AvgTeenAgeCalculator {
      *
      * @param ages массив из корректно заданных возрастов.
      * @return средний возраст подростков или -1, если подростков не найдено.
+     * @throws IllegalArgumentException если массив возрастов {@code null}.
      */
     public static int findAvgTeenAge(int[] ages) {
+        checkNotNull(ages);
+
         int teensCount = 0;
         int teenAgesSum = 0;
 
@@ -44,5 +47,11 @@ public class AvgTeenAgeCalculator {
      */
     private static boolean isTeenAge(int age) {
         return age >= 12 && age <= 17;
+    }
+
+    private static void checkNotNull(int[] array) {
+        if (array == null) {
+            throw new IllegalArgumentException("null array");
+        }
     }
 }
