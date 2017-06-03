@@ -7,11 +7,8 @@ package com.bvan.javastart.loop;
  */
 public class LeftDirectionArrows {
 
-    public static final int ARROWS_QUANTITY = 2;
-    public static final int ARROW_SIZE = 5;
-
     public static void main(String[] args) {
-        printLeftDirectionArrows(ARROW_SIZE, ARROWS_QUANTITY);
+        printLeftDirectionArrows(10, 3);
     }
 
     private static void printLeftDirectionArrows(int arrowSize, int arrowsQuantity) {
